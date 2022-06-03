@@ -3,9 +3,9 @@ import './styles.css';
 
 function App() {
   return (
-    <div>
+    <main>
       <h1>hallo whirled</h1>
-    </div>
+    </main>
   );
 }
 
