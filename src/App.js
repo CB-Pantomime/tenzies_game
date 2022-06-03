@@ -24,20 +24,17 @@ function App() {
 
   return (
     <main>
-      <div className='game-play'>
-
-        {/* <h1 className='title'>Tenzies</h1>
-        <p className='instructions'>Roll until all dice are the same. Click keach die to freeze it at its current value between rolls. Easy fun!</p> */}
-
-          <div className='dice-container'>
-            {diceElements}
-          </div>
-          <button 
+        <div 
+          className='dice-container'
+          >
+          {diceElements}
+        </div>
+        <button 
+          className='roll-dice'
           onClick={rollDice}
           >
-            Roll dice
-          </button>
-      </div>
+          Roll dice
+        </button>
     </main>
   );
 }
