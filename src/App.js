@@ -1,5 +1,5 @@
 
-import './styles.css';
+import './style.css';
 
 function App() {
   return (
