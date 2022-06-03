@@ -35,4 +35,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+}
+
+.die-number {
+    font-size: 2rem;
 }
