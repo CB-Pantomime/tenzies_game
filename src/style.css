@@ -5,7 +5,10 @@
 body {
     margin: 0;
     background-color: #0B2434;
-    padding: 20px;
+    padding: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -41,3 +44,7 @@ main {
 .die-number {
     font-size: 2rem;
 }
+
+/* button {
+  
+} */
