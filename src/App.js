@@ -4,7 +4,7 @@ import './style.css';
 function App() {
   return (
     <main>
-      <h1>hallo whirled</h1>
+      {/* <h1>hallo whirled</h1> */}
     </main>
   );
 }

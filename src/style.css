@@ -5,3 +5,12 @@
 body {
     margin: 0;
 }
+
+main {
+    position: absolute;
+    width: 360px;
+    height: 379px;
+    left: 76px;
+    top: 69px;
+    background: #0B2434;
+}
