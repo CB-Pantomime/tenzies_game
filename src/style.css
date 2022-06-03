@@ -12,5 +12,52 @@ main {
     height: 379px;
     left: 76px;
     top: 69px;
+    /* margin: 69px, 69px, 75px, 75px; */
     background: #0B2434;
+}
+
+.game-play {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 20px;
+    top: 30px;
+    background: #F5F5F5;
+    border-radius: 10px;
+}
+
+.title {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.6px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #2B283A;
+}
+
+.instructions {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: -28.7%;
+    bottom: -24.36%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.1072px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #4A4E74;
 }

@@ -4,7 +4,10 @@ import './style.css';
 function App() {
   return (
     <main>
-      {/* <h1>hallo whirled</h1> */}
+      <div className='game-play'>
+        <h1 className='title'>Tenzies</h1>
+        <p className='instructions'>Roll until all dice are the same. Click keach die to freeze it at its current value between rolls. Easy fun!</p>
+      </div>
     </main>
   );
 }
