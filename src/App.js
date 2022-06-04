@@ -25,6 +25,7 @@ function App() {
         <Die 
         key={die.id} 
         value={die.value}
+        isHeld={die.isHeld}
         />
       )
   })
