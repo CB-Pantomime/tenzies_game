@@ -24,19 +24,12 @@ function App() {
 
   return (
     <main>
-        <div 
-          className='dice-container'
-          >
-          {diceElements}
+        <div className="dice-container">
+            {diceElements}
         </div>
-        <button 
-          className='roll-dice'
-          onClick={rollDice}
-          >
-          Roll dice
-        </button>
+        <button className="roll-dice" onClick={rollDice}>Roll</button>
     </main>
-  );
+)
 }
 
 export default App;
