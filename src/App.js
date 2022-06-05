@@ -2,7 +2,7 @@ import React, { useState, useEffect }from 'react'
 import './style.css';
 import Die from './Die'
 import {nanoid} from 'nanoid'
-
+import Confetti from 'react-confetti'
 
 function App() {
 
@@ -46,18 +46,25 @@ function App() {
     console.log(`Here is the ID: ${id}`)
   }
 
-  const [tenzies, setTenzies] =React.useState(false)
+  const [tenzies, setTenzies] = React.useState(false)
+  // const [confetti, setConfetti] = React.useState(false)
 
   React.useEffect( () => {
      const allTrue = dice.every( die => die.isHeld )
      const allSame = dice.every( die => die.value )
      if(allTrue && allSame){
        setTenzies(true)
+      //  setConfetti(true)
        console.log(`WIN`)
      }
     // console.log(`Dice state changed`)
   }, [dice])
 
+  // React.useEffect( () => {
+  //   if(confetti){
+  //     setTenzies(false)
+  //   }
+  // }, [tenzies])
 
   const diceElements = dice.map((die) => {
       return (
@@ -72,23 +79,35 @@ function App() {
   })
  
   function rollDice() {
-    setDice( prevDice =>  prevDice.map( die => {
-      return die.isHeld ? 
-      die :
-      getNewDie()
-    }))
+    if(!tenzies){
+      setDice( prevDice =>  prevDice.map( die => {
+        return die.isHeld ? 
+        die :
+        getNewDie()
+      }))
+    }else if(tenzies){
+      setTenzies(false)
+      setDice(allNewDice())
+    }
+   
   }
 
 
 
   return (
     <main>
+      {tenzies ? <Confetti /> : null }
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
         <div className="dice-container">
             {diceElements}
         </div>
-        <button className="roll-dice" onClick={rollDice}>Roll</button>
+        <button 
+        className="roll-dice" 
+        onClick={rollDice}
+        >
+          {tenzies ? "Go again?" : "Roll"}
+          </button>
     </main>
   )
 }
