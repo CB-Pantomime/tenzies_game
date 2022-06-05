@@ -7,7 +7,8 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // at that variable 'root', use the render method and render our App component
 // React.StrictMode is wrapped around it
-// this does: 
+// this helps highlight possible issues with our application. StrictMode does not render any visible UI. 
+// It activates additional checks and warnings for its descendants (our <App />).
 root.render(
   <React.StrictMode>
     <App />
